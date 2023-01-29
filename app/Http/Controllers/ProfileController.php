@@ -21,6 +21,9 @@ class ProfileController extends Controller
         ]);
     }
 
+    public function home() {
+        return view('users.home');
+    }
     /**
      * Update the user's profile information.
      */
