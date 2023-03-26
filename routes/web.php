@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\users\HomeController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -28,6 +29,15 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('/home', [ProfileController::class, 'home'])->name('home');
+Route::get('/home', [HomeController::class, 'home'])->name('home');
+Route::get('/about', [HomeController::class, 'detail'])->name('favorites');
+Route::get('/favorites', [HomeController::class, 'favorites'])->name('favorites');
+Route::get('/about', [HomeController::class, 'about'])->name('about');
+Route::get('/terms', [HomeController::class, 'terms'])->name('terms');
+Route::get('/request', [HomeController::class, 'request'])->name('request');
+Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
+Route::get('/privacy-policy', [HomeController::class, 'privacyPolicy'])->name('privacy-policy');
+
+// Route::get('/about', [HomeController::class, 'index'])->name('illust');
 
 require __DIR__.'/auth.php';

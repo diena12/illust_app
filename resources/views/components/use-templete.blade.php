@@ -10,5 +10,6 @@
 <body class="bg-orange-50">
   <x-header></x-header>
   {{ $slot }}
+  <x-footer></x-footer>
 </body>
 </html>
