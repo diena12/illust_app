@@ -1,4 +1,4 @@
-<x-use-templete>
+<x-user-templete>
   <main>
   <section class="flex flex-col lg:flex-row justify-between gap-6 sm:gap-10 md:gap-16 md:px-20 py-8">
 		<div class="xl:w-5/12 flex flex-col justify-center items-center lg:text-left lg:py-12 xl:py-24">
@@ -190,4 +190,4 @@
 		</div>
 	</section>
   </main>
-</x-use-templete>
+</x-user-templete>

@@ -10,6 +10,9 @@ use App\Http\Controllers\Admin\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Admin\Auth\RegisteredUserController;
 use App\Http\Controllers\Admin\Auth\VerifyEmailController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Admin\IllustController;
+use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\TagController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,6 +33,10 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return view('admin.dashboard');
 })->middleware(['auth:admin', 'verified'])->name('dashboard');
+
+Route::get('illust_list', [IllustController::class, 'index'])->middleware(['auth:admin', 'verified'])->name('illust_list');
+Route::get('category_list', [CategoryController::class, 'index'])->middleware(['auth:admin', 'verified'])->name('category_list');
+Route::get('tag_list', [TagController::class, 'index'])->middleware(['auth:admin', 'verified'])->name('tag_list');
 
 
 Route::middleware('guest')->group(function () {
